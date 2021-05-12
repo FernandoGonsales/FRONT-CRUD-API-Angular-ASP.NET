@@ -1,0 +1,29 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.inline {
+    display: inline-block;
+}
+
+.inline, title, h4 {
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.btn-style {
+    float: right;
+    width: 100px;
+}
+
+.btn-space {
+    margin-right: 10px;
+}
+
+.btn-right {
+    float: right;
+    margin-top: -5px;
+}
+
+.btn-large{
+    width: 100px;
+}

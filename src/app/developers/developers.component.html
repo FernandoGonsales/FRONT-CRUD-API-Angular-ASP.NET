@@ -1,0 +1,78 @@
+<div class="row space">
+  
+  <div class="col-sm-6" *ngIf= "developerSelected">
+    <div class="rom">
+      <div>
+        <app-title class="inline title" [title]= "(developerSelected.id === 0 ? 'Cadastrar Dev.' : 'Editar Desenvolvedor: ' + developerSelected.id)"></app-title>
+        <button class="btn btn-outline-danger btn-style" (click)= "voltar()">
+          Fechar
+        </button>
+      </div>
+    </div>
+    
+    <form [formGroup]= "developerForm" (submit)= "developerSubmit()">
+      <div class="form-group" id="fg-style">
+        <label for="formGroupExampleInput">Nome</label>
+        <input type="text" formControlName="nome" class="form-control">
+      </div>
+      <div class="form-group" id="fg-style">
+        <label for="formGroupExampleInput1">Sexo</label>
+        <input type="text" formControlName="sexo" class="form-control" placeholder="Utilize F para feminimo ou M para masculino">
+      </div>
+      <div class="form-group" id="fg-style">
+        <label for="formGroupExampleInput2">Idade</label>
+        <input type="text" formControlName="idade" class="form-control">
+      </div>
+      <div class="form-group" id="fg-style">
+        <label for="formGroupExampleInput3">Hobby</label>
+        <input type="text" formControlName="hobby" class="form-control">
+      </div>
+      <div class="form-group" id="fg-style">
+        <label for="formGroupExampleInput4">Data de nascimento</label>
+        <input type="text" formControlName="dataNascimento" class="form-control" placeholder="dd/mm/yyyy">
+      </div>
+      <div class="form-group">
+        <br>
+        <button *ngIf= "developerSelected.id === 0" class="btn btn-primary btn-large" [disabled]= "!developerForm.valid">Cadastrar</button>
+        <button *ngIf= "developerSelected.id !== 0" class="btn btn-primary btn-large" [disabled]= "!developerForm.valid">Salvar</button>
+      </div>                  
+    </form>
+  </div>
+  
+  <div [ngClass]= "{'col-sm-6': developerSelected, 'col-sm-12': !developerSelected}">
+    <app-title class="inline" [title]= "title"></app-title>
+      <button class="btn btn-primary btn-right" (click)= "newDeveloper()">
+        Cadastrar Dev.
+      </button>
+    <table class="table table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Sexo</th>
+          <th scope="col">Idade</th>
+          <th scope="col">Hobby</th>
+          <th scope="col">Nascimento</th>
+          <th scope="col">Opções</th>
+        </tr>
+      </thead>
+      <tbody class="thead-style">
+        <tr *ngFor = "let developer of developers">
+          <td scope="row">{{developer.id}}</td>
+          <td>{{developer.nome}}</td>
+          <td>{{developer.sexo.toLocaleUpperCase()}}</td>
+          <td>{{developer.idade}}</td>
+          <td>{{developer.hobby}}</td>
+          <td>{{developer.dataNascimento}}</td>
+          <td>
+            <div class="btn-group">
+              <button (click)= "developerSelect(developer)" class="btn btn-sm btn-outline-primary btn-space">Editar</button>
+              <button class="btn btn-sm btn-outline-danger" (click)= "deleteDeveloper(developer.id)">Excluir</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>

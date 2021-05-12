@@ -1,0 +1,18 @@
+.thead-light {
+    background-color: rgba(0, 102, 255, 0.2);
+    font-family: 'Calibri';
+}
+
+.thead-style {
+    background-color: rgba(238, 238, 238, 0.481);
+    font-family: 'Calibri';
+}
+
+.space {
+    margin-top: 2%;
+}
+
+#fg-style {
+    font-family: 'Calibri';
+    margin-top: 2%;
+}

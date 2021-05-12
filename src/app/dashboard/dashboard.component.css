@@ -1,0 +1,10 @@
+.creditos, p {
+    font-family: 'Calibri';
+    font-size: 20px;
+}
+
+.creditos {
+    margin-top: 5%;
+    color: rgb(72, 72, 72);
+    font-size: 15px;
+}
