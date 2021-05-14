@@ -1,27 +1,82 @@
-# AngularCRUD
+Este projeto está dividido em 2 repositórios:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+Repositório Back: https://github.com/FernandoGonsales/BACK-CRUD-API-Angular-ASP.NET
 
-## Development server
+Repositório Front (este): https://github.com/FernandoGonsales/FRONT-CRUD-API-Angular-ASP.NET
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Instruções:
 
-## Code scaffolding
+<h4>1-Importar projeto</h4>
+-Crie uma pasta e clone os 2 repositórios na mesma pasta, comandos:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+git clone https://github.com/FernandoGonsales/BACK-CRUD-API-Angular-ASP.NET.git
 
-## Build
+git clone https://github.com/FernandoGonsales/FRONT-CRUD-API-Angular-ASP.NET.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<h4>2-Iniciar o back </h4>
 
-## Running unit tests
+-Inicie o visual studio code (VSCode).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+-Abra uma nova janela (ctrl + shift + N).
 
-## Running end-to-end tests
+-Selecione no canto superior esquerdo: File > Open Folder, e abra a pasta onde está localizado o back.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+(Atenção, abra a pasta CRUD-WebAPI).
 
-## Further help
+(exemplo: BACK-CRUD-API-Angular-ASP.NET >>> CRUD-WebAPI).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+-Abra um terminal dentro do VSCode (ctrl + shift + ').
+
+-Digite o comando abaixo no terminal para iniciar a API.
+
+
+dotnet run
+
+
+(exemplo: C:\Users\user-name\Desktop\Nova pasta\BACK-CRUD-API-Angular-ASP.NET\CRUD-WebAPI> dotnet run)
+
+-Aguarde alguns segundos e você verá uma mensagem no terminal semelhante a esta:
+
+
+info: Microsoft.Hosting.Lifetime[0]
+      Application started.
+      
+      
+-Com isso sua API já estará rodando.
+
+-Você poderá acessar a url abaixo e visualizar os end-points através do swagger (opcional).
+
+https://localhost:5001/swagger/index.html
+
+
+<h4>3- Iniciar o front </h4>
+
+-Abra uma nova janela no VSCode (ctrl + shift + N). 
+
+Em seguida, selecione File > Open Folder e abra a pasta onde está o front.
+
+(FRONT-CRUD-API-Angular-ASP.NET).
+
+-Abra um terminal dentro do VSCode (ctrl + shift + ').
+
+-Digite o comando abaixo no terminal para baixar o Angular Kit.
+
+
+npm install @angular-devkit/build-angular
+
+
+(exemplo: C:\Users\user-name\Desktop\Nova pasta\FRONT-CRUD-API-Angular-ASP.NET> npm install @angular-devkit/build-angular)
+
+-Aguarde alguns segundos até a instalação finalizar.
+
+-Após finalizar, digite o comando abaixo no terminal para iniciar o Angular Cli.
+
+
+ng serve
+
+
+(exemplo: C:\Users\user-name\Desktop\Nova pasta\FRONT-CRUD-API-Angular-ASP.NET> ng serve).
+
+-Aguarde alguns segundos, até aparecer no terminal "Compiled successfully.".
+
+-Com isso feito, você já podera acessar o site através da url: http://localhost:4200/dashboard.
